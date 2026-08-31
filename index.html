@@ -269,7 +269,12 @@
       margin-bottom: 0;
     }
 
-    .project-grid,
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
     .advisory-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -309,6 +314,22 @@
       line-height: 1.1;
       font-weight: 600;
       color: var(--text);
+    }
+
+    .project-desc {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .project-tech {
+      margin: 0 0 18px;
+      color: var(--soft);
+      font-family: "IBM Plex Sans", "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
     }
 
     .advisory-card p {
@@ -427,6 +448,7 @@
     .ko .intro-top,
     .ko .hero-desc,
     .ko .about-panel p,
+    .ko .project-desc,
     .ko .advisory-card p,
     .ko .link-meta span,
     .ko .hero-bottom-desc {
@@ -513,6 +535,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="lang-switch" aria-label="Language switcher">
     <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
@@ -581,28 +604,27 @@
         </div>
 
         <div class="project-grid">
-          <a class="project-card" href="YOUR_LINK_1" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-card"
+            href="https://github.com/hanacho-lab/incheon-tourism-analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p class="project-index">Project 01</p>
-            <h3>Title 1</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
 
-          <a class="project-card" href="YOUR_LINK_2" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 02</p>
-            <h3>Title 2</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
+            <h3>Incheon Tourism Analytics</h3>
 
-          <a class="project-card" href="YOUR_LINK_3" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 03</p>
-            <h3>Title 3</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
+            <p class="project-desc">
+              Built an analytics-ready tourism data model for Incheon using dbt and
+              BigQuery, with spatial analysis connecting tourism spots and nearby
+              accommodation.
+            </p>
 
-          <a class="project-card" href="YOUR_LINK_4" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 04</p>
-            <h3>Title 4</h3>
-            <span class="project-link-placeholder">Link</span>
+            <p class="project-tech">
+              dbt · BigQuery · SQL
+            </p>
+
+            <span class="project-link-placeholder">View on GitHub ↗</span>
           </a>
         </div>
       </div>
@@ -645,7 +667,7 @@
             <p>
               Led live coding, project review, model evaluation, and technical guidance so that learning could connect directly to practical implementation.
             </p>
-          </div>         
+          </div>
         </div>
       </div>
     </section>
@@ -658,7 +680,12 @@
 
         <div class="links-panel">
           <div class="link-list">
-            <a class="link-item" href="https://www.linkedin.com/in/hahahacho11/" target="_blank" rel="noopener noreferrer">
+            <a
+              class="link-item"
+              href="https://www.linkedin.com/in/hahahacho11/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="link-left">
                 <span class="emoji">💼</span>
                 <div class="link-meta">
@@ -669,7 +696,12 @@
               <span>Open ↗</span>
             </a>
 
-            <a class="link-item" href="https://github.com/hahahacho11" target="_blank" rel="noopener noreferrer">
+            <a
+              class="link-item"
+              href="https://github.com/hahahacho11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="link-left">
                 <span class="emoji">💻</span>
                 <div class="link-meta">
@@ -776,28 +808,26 @@
         </div>
 
         <div class="project-grid">
-          <a class="project-card" href="YOUR_LINK_1" target="_blank" rel="noopener noreferrer">
+          <a
+            class="project-card"
+            href="https://github.com/hanacho-lab/incheon-tourism-analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p class="project-index">Project 01</p>
-            <h3>제목 1</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
 
-          <a class="project-card" href="YOUR_LINK_2" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 02</p>
-            <h3>제목 2</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
+            <h3>Incheon Tourism Analytics</h3>
 
-          <a class="project-card" href="YOUR_LINK_3" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 03</p>
-            <h3>제목 3</h3>
-            <span class="project-link-placeholder">Link</span>
-          </a>
+            <p class="project-desc">
+              dbt와 BigQuery를 활용해 인천 관광지와 숙박 데이터를 분석 가능한 형태로
+              모델링하고, 관광지와 인근 숙박시설의 공간적 관계를 분석한 프로젝트입니다.
+            </p>
 
-          <a class="project-card" href="YOUR_LINK_4" target="_blank" rel="noopener noreferrer">
-            <p class="project-index">Project 04</p>
-            <h3>제목 4</h3>
-            <span class="project-link-placeholder">Link</span>
+            <p class="project-tech">
+              dbt · BigQuery · SQL
+            </p>
+
+            <span class="project-link-placeholder">GitHub에서 보기 ↗</span>
           </a>
         </div>
       </div>
@@ -840,7 +870,7 @@
             <p>
               라이브 코딩, 프로젝트 피드백, 모델 평가, 기술 지도를 통해 기초 학습이 실제 적용으로 이어지도록 돕는 역할을 해왔습니다.
             </p>
-          </div>          
+          </div>
         </div>
       </div>
     </section>
@@ -853,7 +883,12 @@
 
         <div class="links-panel">
           <div class="link-list">
-            <a class="link-item" href="https://www.linkedin.com/in/hahahacho11/" target="_blank" rel="noopener noreferrer">
+            <a
+              class="link-item"
+              href="https://www.linkedin.com/in/hahahacho11/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="link-left">
                 <span class="emoji">💼</span>
                 <div class="link-meta">
@@ -864,7 +899,12 @@
               <span>Open ↗</span>
             </a>
 
-            <a class="link-item" href="https://github.com/hahahacho11" target="_blank" rel="noopener noreferrer">
+            <a
+              class="link-item"
+              href="https://github.com/hahahacho11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="link-left">
                 <span class="emoji">💻</span>
                 <div class="link-meta">
